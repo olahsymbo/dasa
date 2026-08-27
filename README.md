@@ -92,11 +92,6 @@ SegFormer-B0 while helping DeepLabV3 — globally turning augmentation up is not
 good, which is the paper's core motivation. Second, no single-signal ablation wins
 everywhere; DASA's advantage comes from the signals being complementary.
 
-The full result set, including the numbers currently in `outputs/csv/`, is discussed in
-[docs/outputs.md](docs/outputs.md) — note that the committed CSVs come from the
-`paper_lite` config, which is **not** identical to the paper protocol. See
-[docs/experiments.md](docs/experiments.md#configs-vs-the-paper-protocol).
-
 ---
 
 ## Citation

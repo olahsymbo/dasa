@@ -7,14 +7,15 @@ Reference implementation and experiment pack for:
 > arXiv:[2608.25710](https://arxiv.org/abs/2608.25710) \[cs.CV], 26 Aug 2026
 
 Most augmentation pipelines apply the same transformation budget to every training
-image, or adapt it from a single signal such as loss. DASA treats augmentation as a
-**resource to allocate**: it scores each training sample on four complementary
-difficulty signals — prediction ambiguity, optimization difficulty, class rarity, and
-boundary complexity — combines them into a normalized score `d_i ∈ [0, 1]`, and maps
+image, or adapt it from a single signal such as loss. 
+
+DASA treats augmentation as a **resource to allocate**: it scores each training sample on four complementary
+difficulty signals such as prediction ambiguity, optimization difficulty, class rarity, and
+boundary complexity, combines them into a normalized score `d_i ∈ [0, 1]`, and maps
 that score to a per-sample augmentation strength `s_i`. Easy samples stay lightly
 perturbed; hard samples get stronger geometric and photometric transformations.
 
-The method is architecture-agnostic — no changes to the segmentation network — and is
+The method is architecture-agnostic, requires no changes to the segmentation network and is
 evaluated here on U-Net, DeepLabV3-ResNet50, and SegFormer-B0 across Oxford-IIIT Pet
 (3-class trimap) and binary Pascal VOC.
 

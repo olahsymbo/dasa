@@ -72,7 +72,7 @@ the paper); it is not a separate variant.
 Headline numbers from the paper (image size 128×128, 20 baseline epochs, 3 rounds × 3
 epochs for adaptive methods):
 
-**Oxford-IIIT Pet** — mIoU, best per model in bold
+**Oxford-IIIT Pet**: mIoU, best per model in bold
 
 | Model | Baseline | Strong uniform | Loss-only | Boundary-only | DASA |
 | --- | --- | --- | --- | --- | --- |
@@ -80,7 +80,7 @@ epochs for adaptive methods):
 | DeepLabV3 | 0.633 | 0.716 | 0.725 | 0.717 | **0.740** |
 | SegFormer-B0 | 0.711 | 0.686 | 0.730 | 0.718 | **0.730** |
 
-**Binary Pascal VOC** — foreground IoU, where DASA wins for every architecture
+**Binary Pascal VOC**: foreground IoU, where DASA wins for every architecture
 
 | Model | Baseline | Best single-signal | DASA |
 | --- | --- | --- | --- |
@@ -89,7 +89,7 @@ epochs for adaptive methods):
 | SegFormer-B0 | 0.446 | 0.440 (rarity) | **0.468** |
 
 Two things worth reading off these tables. First, `strong_uniform` *hurts* U-Net and
-SegFormer-B0 while helping DeepLabV3 — globally turning augmentation up is not reliably
+SegFormer-B0 while helping DeepLabV3, globally turning augmentation up is not reliably
 good, which is the paper's core motivation. Second, no single-signal ablation wins
 everywhere; DASA's advantage comes from the signals being complementary.
 

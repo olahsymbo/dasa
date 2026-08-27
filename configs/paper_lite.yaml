@@ -1,0 +1,19 @@
+seed: 42
+data_root: ./data
+output_root: ./outputs
+datasets: [pet, voc_binary]
+image_size: 128
+max_samples: null
+models: [unet, deeplabv3, segformer_b0]
+methods: [baseline, strong_uniform, random_weighted, loss_only, rarity_only, boundary_only, DASA_EM]
+batch_size: 40
+segformer_batch_size: 8
+baseline_epochs: 10
+em_rounds: 3
+epochs_per_m_step: 3
+lr: 0.001
+weight_decay: 0.001
+mc_passes: 4
+budget_strength: 4.0
+num_workers: 4
+save_checkpoints: true

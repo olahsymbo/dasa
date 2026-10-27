@@ -134,3 +134,4 @@ data/oxford-iiit-pet
 outputs-old
 # paper figures stay tracked despite the *.png rule above
 !outputs/figures/**
+!outputs/csv/results.csv
